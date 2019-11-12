@@ -25,11 +25,11 @@ namespace Minirechner
             Console.WriteLine($"Summe als Double: {zahl1 + zahl2}\n");
 
             //Berechnung und Ausgabe der Division:
-            Double max = Math.Max(zahl1, zahl2);
+            double max = Math.Max(zahl1, zahl2);
             double min = Math.Min(zahl1, zahl2);
             double erg = max / min;
             Console.WriteLine($"{max} / {min} = {erg}");
-
+            
             //Alternative:
             Console.WriteLine($"{Math.Max(zahl1, zahl2)} / {Math.Min(zahl1, zahl2)} = {Math.Max(zahl1, zahl2) / Math.Min(zahl1, zahl2)}");
 
