@@ -9,7 +9,16 @@ namespace Fahrzeugpark
     //KLASSEN sind Vorlagen für OOP-Objekte. Hier wird das Aussehen, das Verhalten und der Startzustand für Objekte dieses Typs definiert.
     public abstract class Fahrzeug
     {
-        public static int AnzahlErstellterFahrzeuge { get; set; } = 0;
+        #region Statische Member
+        //Als STATIC markierte Variablen und Methoden hängen an der Klasse selbst und nicht an instanziierten Objekten.
+
+        public static int AnzahlErstellterFahrzeuge { get; private set; } = 0;
+
+        public static string ZeigeAnzahlFahrzeuge()
+        {
+            return "Es wurden " + AnzahlErstellterFahrzeuge + " Fahrzeuge produziert.";
+        }
+        #endregion
 
         #region Felder und Eigenschaften
         //FELDER (Membervariablen) sind die Variablen einzelner Objekte, welche die Zustände dieser Objekte definieren

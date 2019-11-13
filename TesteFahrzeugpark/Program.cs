@@ -52,18 +52,38 @@ namespace TesteFahrzeugpark
 
             #endregion
 
-            PKW pkw1 = new PKW("BMW", 230, 26000, 3);
-            pkw1 = new PKW("BMW", 230, 26000, 3);
-            pkw1 = new PKW("BMW", 230, 26000, 3);
-            pkw1 = new PKW("BMW", 230, 26000, 3);
-            pkw1 = new PKW("BMW", 230, 26000, 3);
-            pkw1 = new PKW("BMW", 230, 26000, 3);
+            #region Modul05: Vererbung
+            //PKW pkw1 = new PKW("BMW", 230, 26000, 3);
+            //pkw1 = new PKW("BMW", 230, 26000, 3);
+            //pkw1 = new PKW("BMW", 230, 26000, 3);
+            //pkw1 = new PKW("BMW", 230, 26000, 3);
+            //pkw1 = new PKW("BMW", 230, 26000, 3);
+            //pkw1 = new PKW("BMW", 230, 26000, 3);
 
+            //Console.WriteLine(pkw1.BeschreibeMich());
+
+            //pkw1.Hupe();
+
+            //Console.WriteLine("Es wurden " + Fahrzeug.AnzahlErstellterFahrzeuge + " Fahrzeuge gebaut."); 
+            #endregion
+
+            #region Lab05: PKW-, Schiff- und Flugzeug-Klasse
+
+            PKW pkw1 = new PKW("BMW", 250, 23000, 5);
             Console.WriteLine(pkw1.BeschreibeMich());
-
             pkw1.Hupe();
 
-            Console.WriteLine("Es wurden " + Fahrzeug.AnzahlErstellterFahrzeuge + " Fahrzeuge gebaut.");
+            Schiff schiff1 = new Schiff("Titanic", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf);
+            Console.WriteLine(schiff1.BeschreibeMich());
+            schiff1.Hupe();
+
+            Flugzeug flugzeug1 = new Flugzeug("Boing", 750, 3000000, 9990);
+            Console.WriteLine(flugzeug1.BeschreibeMich());
+            flugzeug1.Hupe();
+
+            Console.WriteLine(Fahrzeug.ZeigeAnzahlFahrzeuge());
+
+            #endregion
 
             Console.ReadKey();
         }
