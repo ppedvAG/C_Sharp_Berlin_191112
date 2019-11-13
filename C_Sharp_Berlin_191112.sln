@@ -7,11 +7,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul01_HalloWorld", "Hallo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01_Minirechner", "Minirechner\Lab01_Minirechner.csproj", "{0B1E645E-4471-4BBD-A066-F242F84AE495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul02_Kontrollstrukturen", "Kontrollstrukturen\Modul02_Kontrollstrukturen.csproj", "{6E840910-31A9-455E-B695-4A97E9317605}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul02.1_Kontrollstrukturen", "Kontrollstrukturen\Modul02.1_Kontrollstrukturen.csproj", "{6E840910-31A9-455E-B695-4A97E9317605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zufallszahlenraten", "Zufallszahlenraten\Zufallszahlenraten.csproj", "{0089B9F4-0120-483B-95FE-5D1571DAA458}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul02.2_Zufallszahlenraten", "Zufallszahlenraten\Modul02.2_Zufallszahlenraten.csproj", "{0089B9F4-0120-483B-95FE-5D1571DAA458}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab02_Lotto", "Lotto\Lab02_Lotto.csproj", "{6C2961DC-2F95-49ED-88CC-F0608B40FEBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03.1_Enumeratoren", "Enumeratoren\Modul03.1_Enumeratoren.csproj", "{F6F96700-0CAD-4DC1-84AA-CA40EDB867AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul03.2_Funktionen", "Funktionen\Modul03.2_Funktionen.csproj", "{BFEF1BA1-17CE-48D4-B527-8DF92599B184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03_Taschenrechner", "Taschenrechner\Lab03_Taschenrechner.csproj", "{04BDAD12-0432-4DEA-80DB-C8A977AD774B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.1f_Fahrzeugpark", "Fahrzeugpark\Modul04.1f_Fahrzeugpark.csproj", "{48B1CAC9-0E7B-42E0-881B-9D5B7C5C9CC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.2f_TesteFahrzeugpark", "TesteFahrzeugpark\Modul04.2f_TesteFahrzeugpark.csproj", "{A0E32CC8-E8B3-4F77-9881-0C7F059A5859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +49,26 @@ Global
 		{6C2961DC-2F95-49ED-88CC-F0608B40FEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C2961DC-2F95-49ED-88CC-F0608B40FEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C2961DC-2F95-49ED-88CC-F0608B40FEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F96700-0CAD-4DC1-84AA-CA40EDB867AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F96700-0CAD-4DC1-84AA-CA40EDB867AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F96700-0CAD-4DC1-84AA-CA40EDB867AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F96700-0CAD-4DC1-84AA-CA40EDB867AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEF1BA1-17CE-48D4-B527-8DF92599B184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEF1BA1-17CE-48D4-B527-8DF92599B184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEF1BA1-17CE-48D4-B527-8DF92599B184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEF1BA1-17CE-48D4-B527-8DF92599B184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BDAD12-0432-4DEA-80DB-C8A977AD774B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BDAD12-0432-4DEA-80DB-C8A977AD774B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BDAD12-0432-4DEA-80DB-C8A977AD774B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BDAD12-0432-4DEA-80DB-C8A977AD774B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B1CAC9-0E7B-42E0-881B-9D5B7C5C9CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B1CAC9-0E7B-42E0-881B-9D5B7C5C9CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B1CAC9-0E7B-42E0-881B-9D5B7C5C9CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B1CAC9-0E7B-42E0-881B-9D5B7C5C9CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E32CC8-E8B3-4F77-9881-0C7F059A5859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E32CC8-E8B3-4F77-9881-0C7F059A5859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E32CC8-E8B3-4F77-9881-0C7F059A5859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E32CC8-E8B3-4F77-9881-0C7F059A5859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
