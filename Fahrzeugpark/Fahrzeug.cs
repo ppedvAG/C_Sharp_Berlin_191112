@@ -99,6 +99,7 @@ namespace Fahrzeugpark
             this.AktGeschwindigkeit = 0;
         }
 
+        //Eine als VIRTUAL gesetzte Methode erlaubt den Kindklassen diese per OVERRIDE zu überschreiben
         public virtual string BeschreibeMich()
         {
             if (this.MotorLäuft)
@@ -107,6 +108,8 @@ namespace Fahrzeugpark
                 return $"{this.Name} kostet {this.Preis}€ und könnte maximal {this.AktGeschwindigkeit}km/h fahren.";
         }
 
+        //Eine als ABSTRACT gesetzte Methode (nur in abstrakten Klassen möglich) beseht nur aus einem Methodenkopf und zwingt erbende
+        //Klassen diese Methode zu implementieren
         public abstract void Hupe();
         #endregion
     }

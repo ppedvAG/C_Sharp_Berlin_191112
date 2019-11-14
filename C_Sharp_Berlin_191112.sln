@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.2f_TesteFahrzeugpar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WdhPolymorphismus", "WdhPolymorphismus\WdhPolymorphismus.csproj", "{83113E2D-8C97-4125-B97D-60F002A3FCDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08_ExceptionHandling", "ExceptionHandling\Modul08_ExceptionHandling.csproj", "{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{83113E2D-8C97-4125-B97D-60F002A3FCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83113E2D-8C97-4125-B97D-60F002A3FCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83113E2D-8C97-4125-B97D-60F002A3FCDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

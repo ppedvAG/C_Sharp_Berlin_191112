@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fahrzeugpark
 {
+    //vgl auch PKW
     public class Flugzeug : Fahrzeug, IBewegbar
     {
         public int MaxFlughöhe { get; set; }

@@ -117,43 +117,130 @@ namespace TesteFahrzeugpark
 
             #endregion
 
-            List<string> Staedteliste = new List<string>();
+            #region Modul07: Generische Listen
+            //List<string> Staedteliste = new List<string>();
 
-            Staedteliste.Add("Berlin");
-            Staedteliste.Add("Hamburg");
-            Staedteliste.Add("München");
-            Staedteliste.Add("Köln");
+            //Staedteliste.Add("Berlin");
+            //Staedteliste.Add("Hamburg");
+            //Staedteliste.Add("München");
+            //Staedteliste.Add("Köln");
 
-            Console.WriteLine(Staedteliste[2]);
-            Staedteliste[2] = "Dresden";
-            Console.WriteLine(Staedteliste[2]);
+            //Console.WriteLine(Staedteliste[2]);
+            //Staedteliste[2] = "Dresden";
+            //Console.WriteLine(Staedteliste[2]);
 
-            foreach (var item in Staedteliste)
+            //foreach (var item in Staedteliste)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //Dictionary<int, string> Dictionary1 = new Dictionary<int, string>();
+
+            //Dictionary1.Add(2, "Hallo");
+            //Dictionary1.Add(4, "Ciao");
+            //Dictionary1.Add(8, "Moin");
+
+            //Console.WriteLine(Dictionary1[4]);
+
+            //foreach (var item in Dictionary1)
+            //{
+            //    Console.WriteLine(item.Key + ": " + item.Value);
+            //}
+
+            //Hashtable ht = new Hashtable();
+
+            //ht.Add("Hallo", 450);
+            //ht.Add(78.5, new PKW("VW", 260, 250020, 4));
+
+            //HashSet<int> hs = new HashSet<int>();
+            //hs.Add(23); 
+            #endregion
+
+            #region Lab07 ZufälligeFahrzeuglisten
+
+            ////Deklaration der benötigten Variablen und und Initialisierung mit Instanzen der benötigten Objekte
+            //Random generator = new Random();
+            //Queue<Fahrzeug> fzQueue = new Queue<Fahrzeug>();
+            //Stack<Fahrzeug> fzStack = new Stack<Fahrzeug>();
+            //Dictionary<Fahrzeug, Fahrzeug> fzDict = new Dictionary<Fahrzeug, Fahrzeug>();
+            ////Deklaration und Initialisierung einer Variablen zur Bestimmung der Anzahl der Durchläufe 
+            //int AnzahlFZs = 10000;
+
+            ////Schleife zur zufälligen Befüllung von Queue und Stack
+            //for (int i = 0; i < AnzahlFZs; i++)
+            //{
+            //    //Würfeln einer zufälligen Zahl im Switch
+            //    switch (generator.Next(1, 4))
+            //    {
+            //        //Erzeugung von Objekten je nach zufälliger Zahl
+            //        case 1:
+            //            fzQueue.Enqueue(new Flugzeug($"Boing_Q{i}", 800, 3600000, 9999));
+            //            fzStack.Push(new Flugzeug($"Boing_S{i}", 800, 3600000, 9999));
+            //            break;
+            //        case 2:
+            //            fzQueue.Enqueue(new Schiff($"Titanic_Q{i}", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf));
+            //            fzStack.Push(new Schiff($"Titanic_S{i}", 40, 3500000, Schiff.SchiffsTreibstoff.Dampf));
+            //            break;
+            //        case 3:
+            //            fzQueue.Enqueue(PKW.ErzeugeZufälligenPKW($"_Q{i}"));
+            //            fzStack.Push(PKW.ErzeugeZufälligenPKW($"_S{i}"));
+            //            break;
+            //    }
+            //}
+
+            ////Schleife zur Prüfung auf das Interface und Befüllung des Dictionaries
+            //for (int i = 0; i < AnzahlFZs; i++)
+            //{
+            //    //Prüfung, ob das Interface vorhanden ist (mittels Peek(), da die Objekte noch benötigt werden)...
+            //    if (fzQueue.Peek() is IBeladbar)
+            //    {
+            //        //...wenn ja, dann Cast in das Interface und Ausführung der Belade()-Methode (mittels Peek())...
+            //        ((IBeladbar)fzQueue.Peek()).Belade(fzStack.Peek());
+            //        //...sowie Hinzufügen zum Dictionary (mittels Pop()/Dequeue(), um beim nächsten Durchlauf andere Objekte an den Spitzen zu haben)
+            //        fzDict.Add(fzQueue.Dequeue(), fzStack.Pop());
+            //    }
+            //    else
+            //    {
+            //        //... wenn nein, dann Löschung der obersten Objekte (mittels Pop()/Dequeue())
+            //        fzQueue.Dequeue();
+            //        fzStack.Pop();
+            //    }
+            //}
+
+            ////Programmpause
+            //Console.ReadKey();
+            //Console.WriteLine("\n----------LADELISTE----------");
+
+            ////Schleife zur Ausgabe des Dictionaries
+            //foreach (var item in fzDict)
+            //{
+            //    Console.WriteLine($"'{item.Key.Name}' hat '{item.Value.Name}' geladen.");
+            //}
+
+            #endregion
+
+
+
+
+
+            #region TaskBsp
+            Task t1 = Task.Factory.StartNew(() =>
             {
-                Console.WriteLine(item);
-            }
+                for (int i = 0; i < 1000; i++)
+                {
+                    Console.WriteLine("Task1: " + i);
+                }
+                Console.WriteLine("Task1 beendet");
+            });
 
-
-            Dictionary<int, string> Dictionary1 = new Dictionary<int, string>();
-
-            Dictionary1.Add(2, "Hallo");
-            Dictionary1.Add(4, "Ciao");
-            Dictionary1.Add(8, "Moin");
-
-            Console.WriteLine(Dictionary1[4]);
-
-            foreach (var item in Dictionary1)
+            for (int i = 0; i < 1000; i++)
             {
-                Console.WriteLine(item.Key + ": " + item.Value);
+                Console.WriteLine("Task2: " + i);
             }
+            Console.WriteLine("Task2 beendet");
+            #endregion
 
-            Hashtable ht = new Hashtable();
-
-            ht.Add("Hallo", 450);
-            ht.Add(78.5, new PKW("VW", 260, 250020, 4));
-
-            HashSet<int> hs = new HashSet<int>();
-            hs.Add(23);
 
             Console.ReadKey();
         }
