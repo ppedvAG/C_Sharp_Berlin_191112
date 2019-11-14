@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Fahrzeugpark
 {
-    public class Flugzeug : Fahrzeug
+    public class Flugzeug : Fahrzeug, IBewegbar
     {
         public int MaxFlughöhe { get; set; }
+        public int AnzahlRaeder { get; set; }
 
         public Flugzeug(string name, int maxG, decimal preis, int maxFH) : base(name, maxG, preis)
         {
@@ -23,6 +24,12 @@ namespace Fahrzeugpark
         public override void Hupe()
         {
             Console.WriteLine("BiepBiep");
+        }
+
+        public void Crash()
+        {
+            Console.WriteLine("Da war ein Vogel im Weg");
+            this.AnzahlRaeder--;
         }
     }
 }
