@@ -30,6 +30,11 @@ namespace WindowsFormsBsp
             (sender as Button).Left += 10;
 
             LblOutput.Text = CbbAuswahl.SelectedItem?.ToString();
+
+            if (timer1.Enabled)
+                timer1.Stop();
+            else
+                timer1.Start();
         }
 
         private void BtnKlickMich_Click_2(object sender, EventArgs e)
@@ -61,6 +66,11 @@ namespace WindowsFormsBsp
             }
             else
                 MessageBox.Show("Das passiert halt mal");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            BtnKlickMich.Top++;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnKlickMich = new System.Windows.Forms.Button();
             this.CbxHakMichAb = new System.Windows.Forms.CheckBox();
             this.CbbAuswahl = new System.Windows.Forms.ComboBox();
@@ -46,6 +47,7 @@
             this.fensterSchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programmBeendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnZeigeMB = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -192,7 +194,7 @@
             // neuToolStripMenuItem
             // 
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
-            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.neuToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.neuToolStripMenuItem.Text = "Neu";
             this.neuToolStripMenuItem.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
             // 
@@ -202,7 +204,7 @@
             this.fensterSchließenToolStripMenuItem,
             this.programmBeendenToolStripMenuItem});
             this.schließenToolStripMenuItem.Name = "schließenToolStripMenuItem";
-            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.schließenToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.schließenToolStripMenuItem.Text = "Schließen";
             // 
             // fensterSchließenToolStripMenuItem
@@ -228,6 +230,10 @@
             this.BtnZeigeMB.Text = "Zeige MB";
             this.BtnZeigeMB.UseVisualStyleBackColor = true;
             this.BtnZeigeMB.Click += new System.EventHandler(this.BtnZeigeMB_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainWindow
             // 
@@ -278,6 +284,7 @@
         private System.Windows.Forms.ToolStripMenuItem fensterSchließenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programmBeendenToolStripMenuItem;
         private System.Windows.Forms.Button BtnZeigeMB;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
