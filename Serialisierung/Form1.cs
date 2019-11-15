@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Fahrzeugpark;
+using Newtonsoft.Json;
 
 namespace Serialisierung
 {
@@ -57,6 +59,63 @@ namespace Serialisierung
             }
         }
 
+        public void SaveFz()
+        {
+            try
+            {
+                JsonSerializerSettings setting = new JsonSerializerSettings();
+                setting.TypeNameHandling = TypeNameHandling.Objects;
+
+                using(StreamWriter writer = new StreamWriter("fahrzeuge.txt"))
+                {
+                    for (int i = 0; i < Fahrzeugliste.Count; i++)
+                    {
+                        string fzAlsString = JsonConvert.SerializeObject(Fahrzeugliste[i], setting);
+
+                        writer.WriteLine(fzAlsString);
+                    }
+                }
+
+                MessageBox.Show("Speichern erfolgreich");
+            }
+            catch 
+            {
+                MessageBox.Show("Speichern fehlgeschlagen");
+            }
+        }
+
+        public void LoadFz()
+        {
+            try
+            {
+                JsonSerializerSettings setting = new JsonSerializerSettings();
+                setting.TypeNameHandling = TypeNameHandling.Objects;
+
+                List<Fahrzeug> tempFahrzeuge = new List<Fahrzeug>();
+
+                using(StreamReader reader = new StreamReader("fahrzeuge.txt"))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        string fzAlsString = reader.ReadLine();
+
+                        Fahrzeug fz = JsonConvert.DeserializeObject<Fahrzeug>(fzAlsString, setting);
+
+                        tempFahrzeuge.Add(fz);
+                    }
+                }
+
+                Fahrzeugliste = tempFahrzeuge;
+
+                MessageBox.Show("Laden erfolgreich");
+
+            }
+            catch
+            {
+                MessageBox.Show("Laden fehlgeschlagen");
+            }
+        }
+
         private void BtnNew_Click(object sender, EventArgs e)
         {
             Fahrzeugliste.Add(CreateNewFz());
@@ -71,12 +130,13 @@ namespace Serialisierung
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
+            SaveFz();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)
         {
-
+            LoadFz();
+            ShowFz();
         }
     }
 }

@@ -221,24 +221,42 @@ namespace TesteFahrzeugpark
             #endregion
 
 
+            PKW pkw1 = PKW.ErzeugeZufälligenPKW("");
+            PKW pkw2 = PKW.ErzeugeZufälligenPKW("");
 
+            Console.WriteLine(pkw1);
 
+            Console.WriteLine(pkw1 == pkw2);
+            Console.WriteLine(pkw1 == pkw1);
 
-            #region TaskBsp
-            Task t1 = Task.Factory.StartNew(() =>
+            Flugzeug flug1 = new Flugzeug($"Boing", 800, 3600000, 9999);
+
+            foreach (var item in flug1)
             {
-                for (int i = 0; i < 1000; i++)
-                {
-                    Console.WriteLine("Task1: " + i);
-                }
-                Console.WriteLine("Task1 beendet");
-            });
-
-            for (int i = 0; i < 1000; i++)
-            {
-                Console.WriteLine("Task2: " + i);
+                Console.WriteLine(item);
             }
-            Console.WriteLine("Task2 beendet");
+
+            Console.WriteLine(flug1[2]);
+
+            Random gene = new Random();
+
+            gene.NextInclusive(1, 10);
+            
+            #region TaskBsp
+            //Task t1 = Task.Factory.StartNew(() =>
+            //{
+            //    for (int i = 0; i < 1000; i++)
+            //    {
+            //        Console.WriteLine("Task1: " + i);
+            //    }
+            //    Console.WriteLine("Task1 beendet");
+            //});
+
+            //for (int i = 0; i < 1000; i++)
+            //{
+            //    Console.WriteLine("Task2: " + i);
+            //}
+            //Console.WriteLine("Task2 beendet");
             #endregion
 
 
@@ -266,4 +284,12 @@ namespace TesteFahrzeugpark
             bewegbaresObjekt.AnzahlRaeder++;
         }
     }
+
+    static class Hilfsmethoden
+    {
+        public static int NextInclusive(this Random generator, int untergrenze, int obergrenze)
+        {
+            return generator.Next(untergrenze, obergrenze + 1);
+        }
+    } 
 }

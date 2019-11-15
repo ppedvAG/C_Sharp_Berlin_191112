@@ -18,6 +18,18 @@ namespace Fahrzeugpark
         {
             return "Es wurden " + AnzahlErstellterFahrzeuge + " Fahrzeuge produziert.";
         }
+
+        public static bool operator ==(Fahrzeug fz1, Fahrzeug fz2)
+        {
+            return fz1.Equals(fz2);
+        }
+
+        public static bool operator !=(Fahrzeug fz1, Fahrzeug fz2)
+        {
+            return !fz1.Equals(fz2);
+        }
+
+
         #endregion
 
         #region Felder und Eigenschaften
@@ -111,6 +123,11 @@ namespace Fahrzeugpark
         //Eine als ABSTRACT gesetzte Methode (nur in abstrakten Klassen möglich) beseht nur aus einem Methodenkopf und zwingt erbende
         //Klassen diese Methode zu implementieren
         public abstract void Hupe();
+
+        public override string ToString()
+        {
+            return this.BeschreibeMich();
+        }
         #endregion
     }
 }

@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeichernUndLaden", "Speich
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialisierung", "Serialisierung\Serialisierung.csproj", "{3A6F39E7-9CC8-4A89-85A1-A321117F44D1}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupBsp", "SetupBsp\SetupBsp.vdproj", "{7B477C31-D3F2-4F32-B210-91A18617BEE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,8 @@ Global
 		{3A6F39E7-9CC8-4A89-85A1-A321117F44D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A6F39E7-9CC8-4A89-85A1-A321117F44D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A6F39E7-9CC8-4A89-85A1-A321117F44D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B477C31-D3F2-4F32-B210-91A18617BEE7}.Debug|Any CPU.ActiveCfg = Debug
+		{7B477C31-D3F2-4F32-B210-91A18617BEE7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

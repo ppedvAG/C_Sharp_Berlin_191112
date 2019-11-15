@@ -46,7 +46,7 @@ namespace Fahrzeugpark
 
         //Statische Methode (gilt für die gesamte Klasse) zur Erstellung eines zufälligen PKWs 
         private static Random generator = new Random();
-        public static Fahrzeug ErzeugeZufälligenPKW(string plusName)
+        public static PKW ErzeugeZufälligenPKW(string plusName)
         {
             string name;
             switch (generator.Next(1, 5))
