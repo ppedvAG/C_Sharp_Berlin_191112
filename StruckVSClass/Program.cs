@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StruckVSClass
 {
+    //vgl. Modul 4 -> Fahrzeug
     class PersonC
     {
         public string name;
@@ -19,6 +20,8 @@ namespace StruckVSClass
 
     }
 
+    //STRUCTS sind Klassenähnliche Konstrukte, welche nicht, wie Klassen, als Referenztypen behandelt werden, sondern ein Wertetyp sind. D.h
+    //bei Übergabe eines Structs an eine Methode oder Variable wird eine Kopie dieses Objekts erstellt
     struct PersonS
     {
         public string name;
@@ -44,6 +47,8 @@ namespace StruckVSClass
             sPerson.alter++;
         }
 
+        //Mittels des REF-Stichworts können Wertetypen als Referenz an Methoden übergeben werden. D.h. die übergebene Speicherstelle selbst 
+        ///wird manipuliert und nicht, wie normalerweise bei Wertetypen, eine Kopie des Werts.
         public static void Altern(ref PersonS sPerson)
         {
             sPerson.alter++;
@@ -51,18 +56,23 @@ namespace StruckVSClass
 
         static void Main(string[] args)
         {
+            //Erstellung von Objekten
             PersonC cPerson = new PersonC("Heiko", 35);
             PersonS sPerson = new PersonS("Anna", 35);
 
+            //Ausgabe
             Console.WriteLine($"{cPerson.name}: {cPerson.alter}");
             Console.WriteLine($"{sPerson.name}: {sPerson.alter}");
 
+            //Funktionsaufruf
             Altern(cPerson);
             Altern(sPerson);
 
+            //Erneute Ausgabe: Nur das Klassenobjekt (Referenztyp) hat sich verändert
             Console.WriteLine($"{cPerson.name}: {cPerson.alter}");
             Console.WriteLine($"{sPerson.name}: {sPerson.alter}");
 
+            //Übergabe des Wertetyps als Refernz mittels Ref-Stichwort
             Altern(ref sPerson);
             Console.WriteLine($"{sPerson.name}: {sPerson.alter}");
 

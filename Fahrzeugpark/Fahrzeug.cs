@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Fahrzeugpark
 {
     //KLASSEN sind Vorlagen für OOP-Objekte. Hier wird das Aussehen, das Verhalten und der Startzustand für Objekte dieses Typs definiert.
+    //Von einer als ABSTRACT gesetzten Klasse können keine Objekte instanziiert werden. Sie ist rein zur Vererbung gedacht.
     public abstract class Fahrzeug
     {
         #region Statische Member
         //Als STATIC markierte Variablen und Methoden hängen an der Klasse selbst und nicht an instanziierten Objekten.
-
         public static int AnzahlErstellterFahrzeuge { get; private set; } = 0;
 
         public static string ZeigeAnzahlFahrzeuge()
@@ -19,6 +19,8 @@ namespace Fahrzeugpark
             return "Es wurden " + AnzahlErstellterFahrzeuge + " Fahrzeuge produziert.";
         }
 
+        //Mittels des OPERATOR-Stichworts können für einzelne Klassen Operatoren definiert werden
+        //(Für Verwendung siehe TesteFahrzeugpark)
         public static bool operator ==(Fahrzeug fz1, Fahrzeug fz2)
         {
             return fz1.Equals(fz2);
@@ -92,12 +94,15 @@ namespace Fahrzeugpark
         //MEMBERMETHODEN sind Funktionen, welche jedes Objekt einer Klasse besitzt und speziell dieses Objekt manipuliert
         public void Beschleunige(int a)
         {
-            if (this.AktGeschwindigkeit + a > this.MaxGeschwindigkeit)
-                this.AktGeschwindigkeit = this.MaxGeschwindigkeit;
-            else if (this.AktGeschwindigkeit + a < 0)
-                this.AktGeschwindigkeit = 0;
-            else
-                this.AktGeschwindigkeit += a;
+            if (this.MotorLäuft)
+            {
+                if (this.AktGeschwindigkeit + a > this.MaxGeschwindigkeit)
+                    this.AktGeschwindigkeit = this.MaxGeschwindigkeit;
+                else if (this.AktGeschwindigkeit + a < 0)
+                    this.AktGeschwindigkeit = 0;
+                else
+                    this.AktGeschwindigkeit += a;
+            }
         }
 
         public void StarteMotor()
@@ -124,6 +129,8 @@ namespace Fahrzeugpark
         //Klassen diese Methode zu implementieren
         public abstract void Hupe();
 
+        //Die ToString()-Methode wird von der object-Klasse an alle anderen Klassen vererbt. Sie wird immer dann aufgerufen, wenn ein Objekt als
+        //String dargestellt werden soll
         public override string ToString()
         {
             return this.BeschreibeMich();

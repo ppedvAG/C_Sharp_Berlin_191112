@@ -25,21 +25,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.2f_TesteFahrzeugpar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WdhPolymorphismus", "WdhPolymorphismus\WdhPolymorphismus.csproj", "{83113E2D-8C97-4125-B97D-60F002A3FCDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08_ExceptionHandling", "ExceptionHandling\Modul08_ExceptionHandling.csproj", "{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08.1_ExceptionHandling", "ExceptionHandling\Modul08.1_ExceptionHandling.csproj", "{5CEE2D69-EA0F-4166-8D1C-25232D0A4EBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestFahrzeugpark", "UnitTestFahrzeugpark\UnitTestFahrzeugpark.csproj", "{9EE68F9B-8283-42C9-A4C2-1383C59B78BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08.2_UnitTestFahrzeugpark", "UnitTestFahrzeugpark\Modul08.2_UnitTestFahrzeugpark.csproj", "{9EE68F9B-8283-42C9-A4C2-1383C59B78BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{530B7B40-6262-485F-871B-41B7273CD143}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul09.1_Delegates", "Delegates\Modul09.1_Delegates.csproj", "{530B7B40-6262-485F-871B-41B7273CD143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsBsp", "WindowsFormsBsp\WindowsFormsBsp.csproj", "{5AD0E319-439C-4F4F-BEBA-42A8CFF698E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul09.2_WindowsFormsBsp", "WindowsFormsBsp\Modul09.2_WindowsFormsBsp.csproj", "{5AD0E319-439C-4F4F-BEBA-42A8CFF698E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonMovement", "ButtonMovement\ButtonMovement.csproj", "{27A101D4-309E-4AE4-8B51-0D5ADBF76C29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab09_ButtonMovement", "ButtonMovement\Lab09_ButtonMovement.csproj", "{27A101D4-309E-4AE4-8B51-0D5ADBF76C29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StruckVSClass", "StruckVSClass\StruckVSClass.csproj", "{3E2EF5C8-5E4B-4994-BAC1-150DEEA8B172}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04.3_StruckVSClass", "StruckVSClass\Modul04.3_StruckVSClass.csproj", "{3E2EF5C8-5E4B-4994-BAC1-150DEEA8B172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeichernUndLaden", "SpeichernUndLaden\SpeichernUndLaden.csproj", "{0C1C66F3-3B4F-40E5-A5B1-C2B3AC71E8EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul10.1_SpeichernUndLaden", "SpeichernUndLaden\Modul10.1_SpeichernUndLaden.csproj", "{0C1C66F3-3B4F-40E5-A5B1-C2B3AC71E8EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialisierung", "Serialisierung\Serialisierung.csproj", "{3A6F39E7-9CC8-4A89-85A1-A321117F44D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul10.2_Serialisierung", "Serialisierung\Modul10.2_Serialisierung.csproj", "{3A6F39E7-9CC8-4A89-85A1-A321117F44D1}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupBsp", "SetupBsp\SetupBsp.vdproj", "{7B477C31-D3F2-4F32-B210-91A18617BEE7}"
 EndProject

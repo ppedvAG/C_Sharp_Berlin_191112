@@ -10,25 +10,40 @@ namespace Zufallszahlenraten
     {
         static void Main(string[] args)
         {
-            Random generator = new Random();
-            int zufallszahl = generator.Next(1, 6);
-            int eingabe;
-
+            //Schleife zum Wdh des Programms
             do
             {
-                Console.Write("Gib bitte eine ganze Zahl zwischen 1 und 5 ein: ");
-                eingabe = int.Parse(Console.ReadLine());
+                //Deklarationen
+                Random generator;
+                int zufallszahl;
+                int eingabe;
 
-                if (eingabe < zufallszahl)
-                    Console.WriteLine("Deine Zahl ist zu klein!");
-                else if (eingabe > zufallszahl)
-                    Console.WriteLine("Deine Zahl ist zu groß!");
-                else
-                    Console.WriteLine("Herzlichen Glückwunsch. Deine Zahl ist richtig.");
+                //Initialisierung eines Random-Objekts mittels Konstruktor-Aufruf (vgl. Modul 04)
+                generator = new Random();
+                //Aufruf der Würfel-Funktion des Random-Objekts (beachte: 1. Grenze inklusiv / 2. Grenze exklusiv)
+                zufallszahl = generator.Next(1, 6);
 
-            } while (eingabe != zufallszahl);
+                //Schleife für erneuten Versuch
+                do
+                {
+                    //Abfrage des Tipps des Benutzers
+                    Console.Write("Gib bitte eine ganze Zahl zwischen 1 und 5 ein: ");
+                    eingabe = int.Parse(Console.ReadLine());
 
-            Console.ReadKey();
+                    //Vergleich Tipp <> Zufallszahl mittels If
+                    if (eingabe < zufallszahl)
+                        Console.WriteLine("Deine Zahl ist zu klein!");
+                    else if (eingabe > zufallszahl)
+                        Console.WriteLine("Deine Zahl ist zu groß!");
+                    else
+                        Console.WriteLine("Herzlichen Glückwunsch. Deine Zahl ist richtig.");
+
+                    //Bedingung für neuen Versuch (= falsche Zahl getippt)
+                } while (eingabe != zufallszahl);
+
+                //Bedingung für Wiederholung (Benutzer muss Taste 'Y' drücken)
+                Console.WriteLine("Möchtest du noch einmal spielen? (Y/N)");
+            } while (Console.ReadKey().Key == ConsoleKey.Y);
         }
     }
 }

@@ -16,20 +16,26 @@ namespace TesteFahrzeugpark
             Console.OutputEncoding = Encoding.UTF8;
 
             #region Modul04: OOP
+            ////Instanzierung der Fahrzeuge
             //Fahrzeug fz1 = new Fahrzeug("BMW", 200);
             //Fahrzeug fz2 = new Fahrzeug("Audi", 180);
 
-            //Console.WriteLine(fz1.Name);
+            ////Ausgabe von fz1
+            //Console.WriteLine(fz1.Name + ": " + fz1.MaxGeschwindigkeit + "km/h");
 
+            ////Veränderung des Namens von fz1
             //fz1.Name = "Opel";
-            //Console.WriteLine(fz1.Name);
-            //Console.WriteLine(fz2.Name);
-
-            //Console.WriteLine(fz2.BeschreibeMich());
+            ////Ausgabe der Fahrzeugeigenschaften (fz1 wurde verändert, fz2 nicht)
+            //Console.WriteLine(fz1.Name + ": " + fz1.MaxGeschwindigkeit + "km/h");
+            //Console.WriteLine(fz2.Name + ": " + fz2.MaxGeschwindigkeit + "km/h");
+            ////Ausgabe der BeschreibeMich-Methode von fz1
             //Console.WriteLine(fz1.BeschreibeMich());
 
-            //fz2 = new Fahrzeug("VW", 250);
 
+            ////Neuzuweisung der fz2-Variable auf Objekt in fz1 (beide Variablen zeigen auf dasselbe Objekt)
+            //fz2 = fz1;
+
+            ////manueller Aufruf der GarbageCollection
             //GC.Collect(); 
             #endregion
 
@@ -118,41 +124,61 @@ namespace TesteFahrzeugpark
             #endregion
 
             #region Modul07: Generische Listen
+            ////Deklaration und Initialisierung einer Liste von Strings
             //List<string> Staedteliste = new List<string>();
 
+            ////Ausgabe der Länge der Liste
+            //Console.WriteLine(Staedteliste.Count);
+
+            ////Hinzufügen von Listeneinträgen
             //Staedteliste.Add("Berlin");
             //Staedteliste.Add("Hamburg");
             //Staedteliste.Add("München");
             //Staedteliste.Add("Köln");
 
+            //Console.WriteLine(Staedteliste.Count);
+
+            ////Ausgabe der 3. Listenposition
             //Console.WriteLine(Staedteliste[2]);
+
+            ////Manipulation der 3. Listenposition
             //Staedteliste[2] = "Dresden";
             //Console.WriteLine(Staedteliste[2]);
 
+            ////Schleife über die Liste
             //foreach (var item in Staedteliste)
             //{
             //    Console.WriteLine(item);
             //}
 
+            ////Löschen des Eintrags 'Köln' (Nachfolgende Einträge rücken nach oben)
+            //Staedteliste.Remove("Köln");
 
+
+            ////Deklaration und Initialisierung eines Dictionarys (Key: Int, Value: String)
             //Dictionary<int, string> Dictionary1 = new Dictionary<int, string>();
 
+            ////Hinzufügen von Dictionary-Einträgen
             //Dictionary1.Add(2, "Hallo");
             //Dictionary1.Add(4, "Ciao");
             //Dictionary1.Add(8, "Moin");
 
+            ////Ausgabe des Eintrags mit Key '4'
             //Console.WriteLine(Dictionary1[4]);
 
+            ////Schleife über Dictionary
             //foreach (var item in Dictionary1)
             //{
             //    Console.WriteLine(item.Key + ": " + item.Value);
             //}
 
+            ////Deklaration und Initialisierung eines Hastables + Erstellung und Abruf von Einträgen (nicht-genereisches Dictionary nach dem Hash-Speicherprinzip)
             //Hashtable ht = new Hashtable();
-
             //ht.Add("Hallo", 450);
             //ht.Add(78.5, new PKW("VW", 260, 250020, 4));
+            //Console.WriteLine(ht["Hallo"]);
 
+            ////Deklaration und Initialisierung eines HashSets (generische Liste nach dem Hash-Speicherprinzip)
             //HashSet<int> hs = new HashSet<int>();
             //hs.Add(23); 
             #endregion
@@ -220,26 +246,30 @@ namespace TesteFahrzeugpark
 
             #endregion
 
-
+            //Erstellung von Bsp-Objekten
             PKW pkw1 = PKW.ErzeugeZufälligenPKW("");
             PKW pkw2 = PKW.ErzeugeZufälligenPKW("");
 
+            //Ausgabe der ToString-Funktion des PKWs (wird in Fahrzeugklasse überschrieben)
             Console.WriteLine(pkw1);
 
+            //Bsp für die Verwendung der in der Fahrzeug-Klasse definierten Operatoren
             Console.WriteLine(pkw1 == pkw2);
             Console.WriteLine(pkw1 == pkw1);
 
             Flugzeug flug1 = new Flugzeug($"Boing", 800, 3600000, 9999);
 
+            //Bsp für die Verwendung von IEnumerable
             foreach (var item in flug1)
             {
                 Console.WriteLine(item);
             }
 
+            //Bsp für die Verwendung der Indexer-Property
             Console.WriteLine(flug1[2]);
 
             Random gene = new Random();
-
+            //Bsp für die Verwendung einer Erweiterungsmethode (s.u.)
             gene.NextInclusive(1, 10);
             
             #region TaskBsp
@@ -287,6 +317,8 @@ namespace TesteFahrzeugpark
 
     static class Hilfsmethoden
     {
+        //Mittels des THIS-Stichworts in der Parameterübergabe kann eine Methode als Erweiterungsmethode einer Klasse definiert
+        //werden. Diese muss in einer statischen Klasse beschrieben werden und wird dann als Teil der zugeordneten Klasse betrachtet.
         public static int NextInclusive(this Random generator, int untergrenze, int obergrenze)
         {
             return generator.Next(untergrenze, obergrenze + 1);
